@@ -1,0 +1,59 @@
+.gradient-background {
+    background: linear-gradient(300deg,  rgb(5, 11, 52),rgb(10, 16, 63), rgb(17, 27, 97), rgb(22, 35, 122) -16.9%, rgb(72, 40, 136), rgb(84, 19, 103) 119.9%, rgb(84, 12, 143), rgb(119, 15, 204), rgb(160, 60, 241));
+    background-size: 180% 180%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.styling {
+    font-family: 'Fira Code', monospace;
+    font-weight: 800;
+    font-size: 29px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 150px;
+    animation: type 2s steps(20, end) forwards, hideCursor 2s step-end forwards;
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+
+    1%,
+    99% {
+        border-right: 1px solid orange;
+    }
+
+    100% {
+        border-right: none;
+    }
+}
+
+@keyframes hideCursor {
+    to {
+        border-right: none;
+    }
+}
+
+.name {
+    font-family: 'Averia Serif Libre', cursive;
+
+    color: white;
+    opacity: 1;
+    font-size: 65px;
+}
